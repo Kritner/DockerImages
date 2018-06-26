@@ -1,8 +1,0 @@
-# docker build -t basedotnetcore2.1_node .
-
-FROM kritner/basedotnetcore2.1:latest
-WORKDIR /app
-
-# Install node
-RUN curl -sL deb.nodesource.com/setup_10.x | sudo -E bash - \
-    && apt-get install -y nodejs

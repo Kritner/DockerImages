@@ -1,4 +1,6 @@
-# docker build -t basedotnetcore2.1 .
+# docker build -t builddotnetcore .
+# docker tag builddotnetcore kritner/builddotnetcore:dnc2.1-v1-base
+# docker push kritner/builddotnetcore:dnc2.1-v1-base
 
 FROM microsoft/dotnet:2.1-sdk
 WORKDIR /app
