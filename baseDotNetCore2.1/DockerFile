@@ -1,0 +1,11 @@
+# docker build -t basedotnetcore2.1 .
+
+FROM microsoft/dotnet:2.1-sdk
+WORKDIR /app
+
+# Perform updates, install gnupg and sudo
+RUN apt-get update \
+    && apt-get -y upgrade \
+    && apt-get -y dist-upgrade \
+    && apt-get install -y gnupg \
+    && apt-get install -y sudo
