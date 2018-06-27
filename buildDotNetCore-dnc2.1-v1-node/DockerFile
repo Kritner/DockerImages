@@ -1,5 +1,4 @@
-# docker build -t builddotnetcore_node .
-# docker tag builddotnetcore_node kritner/builddotnetcore:dnc2.1-v1-node
+# docker build -t kritner/builddotnetcore:dnc2.1-v1-node .
 # docker push kritner/builddotnetcore:dnc2.1-v1-node
 
 FROM kritner/builddotnetcore:dnc2.1-v1-base
