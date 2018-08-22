@@ -1,0 +1,9 @@
+# docker build -t kritner/builddotnetcore:dnc2.2-v1-node .
+# docker push kritner/builddotnetcore:dnc2.2-v1-node
+
+FROM kritner/builddotnetcore:dnc2.2-v1-base
+WORKDIR /app
+
+# Install node
+RUN curl -sL deb.nodesource.com/setup_10.x | sudo -E bash - \
+    && apt-get install -y nodejs

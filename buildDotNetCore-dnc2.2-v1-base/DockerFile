@@ -1,0 +1,12 @@
+# docker build -t kritner/builddotnetcore:dnc2.2-v1-base .
+# docker push kritner/builddotnetcore:dnc2.2-v1-base
+
+FROM microsoft/dotnet:2.2-sdk
+WORKDIR /app
+
+# Perform updates, install gnupg and sudo
+RUN apt-get update \
+    && apt-get -y upgrade \
+    && apt-get -y dist-upgrade \
+    && apt-get install -y gnupg \
+    && apt-get install -y sudo
